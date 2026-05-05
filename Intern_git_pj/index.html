@@ -1,7 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>MY NAME IS MAY ZAR OO</head>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Developer Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2f4154;
+            color: white;
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            
+            
+        }
+
+        .nav a:hover {
+            color: white;
+        }
+
+        /* Main Card */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
 
 
+        .card h2 {
+            margin-top: 0;
+            color: #2f4154;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card img {
+            display: block;
+            margin: 30px auto 0;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2f4154;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #00c853;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div><strong>Welcome to My Site</strong></div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Learning Notes</a>
+            <a href="project.html">Projects</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <h2>Hi, I'm a Junior Developer.</h2>
+            <p>I am learning how to build clean, responsive websites using HTML and CSS.</p>
+
+            <img src="C:\Users\Asus\Pictures\New folder\bear.gif" alt="Hello Bear">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>
+            <a href="#">GitHub</a> |
+            <a href="#">LinkedIn</a> |
+            <a href="#">Twitter</a>
+        </div>
+        <div class="copyright">
+            © 2026 Junior Developer Portfolio. All rights reserved.
+        </div>
+    </div>
+
+</body>
 </html>
