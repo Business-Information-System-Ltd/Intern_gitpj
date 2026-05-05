@@ -1,198 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects | Junior Developer Portfolio</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Learning Notes</title>
 
-        /* Navbar */
-        nav {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<style>
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        nav .logo {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+/* Navbar */
+nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
+nav .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
-        nav ul li a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
 
-        nav ul li a:hover {
-            color: white;
-        }
+nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        /* Main Content Container */
-        .container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+nav ul li a:hover {
+    color: white;
+}
 
-        .main-card {
-            background: white;
-            width: 100%;
-            max-width: 800px;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+/* Main Container */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
-        .header-section h1 {
-            margin-top: 0;
-            font-size: 1.8rem;
-            color: #2c3e50;
-        }
+.main-card {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-        .header-section p {
-            color: #7f8c8d;
-            margin-bottom: 30px;
-        }
+/* Header */
+.header-section h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
 
-        /* --- UPDATED PROJECT CARDS WITH TRANSITION --- */
-        .project-card {
-            background-color: #f8fbfc;
-            border-left: 5px solid #2ecc71;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            
-            /* The transition property goes on the base element */
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
-            cursor: pointer; /* Makes it feel clickable */
-        }
+.header-section p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
 
-        /* Hover state defines what changes during the transition */
-        .project-card:hover {
-            transform: translateY(-5px); /* Lifts the box up */
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Adds a deeper shadow */
-            border-left-color: #3498db; /* Changes the green line to blue on hover */
-            background-color: #ffffff; /* Slightly brightens the background */
-        }
+/* NOTE CARD */
+.note-card {
+    background-color: #f8fbfc;
+    border-left: 5px solid #2ecc71;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* smooth animation */
+}
 
-        .project-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+/* ONLY NOTE CARD HOVER */
+.note-card {
+    background-color: #f8fbfc;
+    border-left: 5px solid #2ecc71; /* green default */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
 
-        .project-card p {
-            margin: 5px 0;
-            font-size: 0.95rem;
-            color: #555;
-        }
+/* Hover effect */
+.note-card:hover {
+    border-left: 5px solid #3498db; /* blue on hover */
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    background-color: #ffffff;
+}
+.note-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
 
-        .tech-stack {
-            font-weight: bold;
-            margin-top: 10px !important;
-        }
+.note-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
 
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: #bdc3c7;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
 
-        .footer-links {
-            margin-bottom: 10px;
-        }
+.footer-links a {
+    color: #2ecc71;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
-        .footer-links a {
-            color: #2ecc71;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+.footer-links a:hover {
+    text-decoration: underline;
+}
 
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-    <!-- Top Navigation -->
-    <nav>
-        <div class="logo">My Projects</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Learning Notes</a></li>
-            <li><a href="project.html">Projects</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">My Learning Notes</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Learning Notes</a></li>
+        <li><a href="project.html">Projects</a></li>
+    </ul>
+</nav>
 
-    <!-- Main Section -->
-    <div class="container">
-        <div class="main-card">
-            <div class="header-section">
-                <h1>🚀 My Projects</h1>
-                <p>Here are some projects I have worked on.</p>
-            </div>
+<div class="container">
+    <div class="main-card">
 
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>🔥 Payment Request Approval System</h3>
-                <p>Built using Power Apps and Power Automate to manage approval workflows.</p>
-                <p class="tech-stack">Tech: Power Apps, Power Automate</p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>📱 Flutter + Django App</h3>
-                <p>Created a web app with Flutter frontend and Django backend with JWT authentication.</p>
-                <p class="tech-stack">Tech: Flutter, Django, REST API</p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>🌐 Portfolio Website</h3>
-                <p>This responsive website built with HTML and CSS.</p>
-                <p class="tech-stack">Tech: HTML, CSS</p>
-            </div>
+        <div class="header-section">
+            <h1>🚀 My Projects</h1>
+            <p>I am currently improving my skills in web development and backend systems.</p>
         </div>
+
+        <div class="note-card">
+            <h3>🔥 Payment Request Approval System</h3>
+            <p>Learned how APIs work, HTTP methods, and status codes.</p>
+        </div>
+
+        <div class="note-card">
+            <h3>📱 Flutter + Django App</h3>
+            <p>Worked with models, serializers, and API views.</p>
+        </div>
+
+        <div class="note-card">
+            <h3>🌐 Portfolio Website</h3>
+            <p>Connected Flutter frontend with Django backend using APIs.</p>
+        </div>
+
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
-        </div>
-        <div>&copy; 2026 Junior Developer Portfolio. All rights reserved.</div>
-    </footer>
+<footer>
+    <div class="footer-links">
+        <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+    </div>
+    <div>&copy; 2026 Junior Developer Portfolio</div>
+</footer>
 
 </body>
 </html>
