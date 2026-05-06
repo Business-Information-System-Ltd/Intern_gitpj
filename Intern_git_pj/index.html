@@ -11,40 +11,81 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
         }
+       
+        /* Navbar */
+nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* Header */
-        .header {
-            background-color: #2f4154;
-            color: white;
-            padding: 1rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+nav .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
-        .nav a {
-            color: #bdc3c7;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-            
-            
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
 
-        .nav a:hover {
-            color: white;
-        }
+nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        /* Main Card */
-        .container {
+nav ul li a:hover {
+    color: white;
+}
+
+/* Main Container */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.main-card {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.header-section h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.header-section p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+
+       
+
+/* Main Card */
+ .container {
             display: flex;
             justify-content: center;
             margin-top: 40px;
         }
 
-        .card {
+ .card {
             background-color: white;
             width: 600px;
             padding: 30px;
@@ -53,65 +94,69 @@
             text-align: left;
         }
 
-        .card:hover {
+ .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
 
 
-        .card h2 {
+ .card h2 {
             margin-top: 0;
             color: #2f4154;
         }
 
-        .card p {
+ .card p {
             color: #666;
         }
 
-        .card img {
+ .card img {
             display: block;
             margin: 30px auto 0;
             width: 200px;
             border-radius: 10px;
         }
 
-        /* Footer */
-        .footer {
-            background-color: #2f4154;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 60px;
-        }
+    /* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
 
-        .footer a {
-            color: #00c853;
-            margin: 0 10px;
+.footer-links {
+            margin-bottom: 8px;
+}
+
+.footer-links a {
+            color: #2ecc71;
             text-decoration: none;
-        }
+            margin: 0 10px;
+}
 
-        .footer a:hover {
+.footer-links a:hover {
             text-decoration: underline;
-        }
-
-        .copyright {
-            font-size: 12px;
-            margin-top: 5px;
-        }
+}
+        
+        
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <div class="header">
-        <div><strong>Welcome to My Site</strong></div>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="blog.html">Learning Notes</a>
-            <a href="project.html">Projects</a>
-        </div>
-    </div>
+    <!-- Navbar  -->
+   <nav>
+    <div class="logo">Welcome to My Site</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Learning Notes</a></li>
+        <li><a href="project.html">Projects</a></li>
+    </ul>
+</nav>
 
     <!-- Main Content -->
     <div class="container">
@@ -119,21 +164,18 @@
             <h2>Hi, I'm a Junior Developer.</h2>
             <p>I am learning how to build clean, responsive websites using HTML and CSS.</p>
 
-            <img src="C:\Users\Asus\Pictures\New folder\bear.gif" alt="Hello Bear">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtzM2VvOXphNDM4dzJmb2h3YTdiZXlsZjNpeWM4aDJsNzMxNmtxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wtdVYmaRWJ1PyPcc8e/giphy.gif" alt="Hello Bear">
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div>
-            <a href="#">GitHub</a> |
-            <a href="#">LinkedIn</a> |
-            <a href="#">Twitter</a>
+    <footer>
+        <div class="footer-links">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
         </div>
-        <div class="copyright">
-            © 2026 Junior Developer Portfolio. All rights reserved.
-        </div>
-    </div>
+        <div>&copy; 2026 Junior Developer Portfolio. All rights reserved.</div>
+    </footer>
+
 
 </body>
 </html>
