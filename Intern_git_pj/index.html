@@ -56,8 +56,8 @@ nav ul li a:hover {
 .main-card {
     background: white;
     width: 100%;
-    max-width: 700px;
-    padding: 8px;
+    max-width: 800px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
@@ -78,14 +78,14 @@ nav ul li a:hover {
 
        
 
-        /* Main Card */
-        .container {
+/* Main Card */
+ .container {
             display: flex;
             justify-content: center;
             margin-top: 40px;
         }
 
-        .card {
+ .card {
             background-color: white;
             width: 600px;
             padding: 30px;
@@ -94,51 +94,55 @@ nav ul li a:hover {
             text-align: left;
         }
 
-        .card:hover {
+ .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
 
 
-        .card h2 {
+ .card h2 {
             margin-top: 0;
             color: #2f4154;
         }
 
-        .card p {
+ .card p {
             color: #666;
         }
 
-        .card img {
+ .card img {
             display: block;
             margin: 30px auto 0;
             width: 200px;
             border-radius: 10px;
         }
 
-        /* Footer */
-        .footer {
-            background-color: #2f4154;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 60px;
-        }
+    /* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
 
-        .footer a {
-            color: #00c853;
-            margin: 0 10px;
+.footer-links {
+            margin-bottom: 8px;
+}
+
+.footer-links a {
+            color: #2ecc71;
             text-decoration: none;
-        }
+            margin: 0 10px;
+}
 
-        .footer a:hover {
+.footer-links a:hover {
             text-decoration: underline;
-        }
-
-        .copyright {
-            font-size: 12px;
-            margin-top: 5px;
-        }
+}
+        
+        
     </style>
 </head>
 
@@ -165,16 +169,13 @@ nav ul li a:hover {
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div>
-            <a href="#">GitHub</a> |
-            <a href="#">LinkedIn</a> |
-            <a href="#">Twitter</a>
+    <footer>
+        <div class="footer-links">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
         </div>
-        <div class="copyright">
-            © 2026 Junior Developer Portfolio. All rights reserved.
-        </div>
-    </div>
+        <div>&copy; 2026 Junior Developer Portfolio. All rights reserved.</div>
+    </footer>
+
 
 </body>
 </html>
